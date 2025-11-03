@@ -1,0 +1,117 @@
+h1 {
+  font-size: 50px;
+  color: #fffffff8
+}
+h2  {
+  color: #fffffff8;
+}
+h3 {
+  color: #fffffff8
+}
+p {
+  font-size: 18px;
+  color: #fffffff8
+}
+a {
+  color: #b3c1ff;
+}
+.bigtxt {
+  font-size: 50px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.4s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  transition: 0.3s;
+}
+
+#main {
+  transition: margin-left .75s;
+  padding: 16px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+body {font-family: Arial, Helvetica;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 12.5px;
+  margin-bottom: 34px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #111;
+  color: #818181;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #6179e4;
+  color: white;
+}
+
+.container {
+  border-radius: 10px;
+  color: #fffffff8;
+  padding: 20px;
+}

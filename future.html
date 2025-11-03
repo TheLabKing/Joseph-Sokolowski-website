@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="stf-8">
+    <title>Joe's Plans</title>
+  </head>
+  <link rel="stylesheet" href="style.css">
+  <body style="background-color:#000000c0">
+    <div id="navSidepanel" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+      <a href="main.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">My Projects</a>
+      <a href="future.html">My Plans</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+    </div>
+    <script> 
+      function openNav()  {
+        document.getElementById("navSidepanel").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+      function closeNav() {
+        document.getElementById("navSidepanel").style.width = "0px";
+        document.getElementById("main").style.marginLeft = "0px";
+      }
+    </script>
+    <h1 class="center">Future Plans and Events</h1>
+    <p class="center">
+      Check out what I plan to do in the future!
+    </p>
+    
+    <img src="Images/RIT_SHED.jpg" class="center">
+    <h2 class="center">My First Co-op</h2>
+    <p style="width:70%" class="center">
+        I will be completing my first co-op at [insert company name here] in [insert location here] during the summer of 2026. I'm exited to learn and gain valueable hands on experience in the real world. I hope to get a position as a SOC operator or an incident responder.
+    </p>
+  </body>
+</html>

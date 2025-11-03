@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="Homepage"
+      content="Homepage of Joseph Sokolowki's website"
+    >
+    <title>Joe's cool website</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body style="background-color:#000000c0">
+    <div id="navSidepanel" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+      <a href="main.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">My Projects</a>
+      <a href="future.html">My Plans</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+      <h1 class="center">Welcome to my website</h1>
+    <p class="center">
+      Here, you'll get to know me, what I like, my hobbies, my accomplishments,
+       and what I have planned for the future.
+    </p>
+    </div>
+    <script> 
+      function openNav()  {
+        document.getElementById("navSidepanel").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+      function closeNav() {
+        document.getElementById("navSidepanel").style.width = "0px";
+        document.getElementById("main").style.marginLeft = "0px";
+      }
+    </script>
+    <h2 class="center" style="width:17.5%">About Me</h2>
+    <br>
+    <img class="center" style="width:50%" src=Images/cello_standing.jpg>
+    <br>
+    <p class="center" style="width:70%">
+      Hello, world! My name is Joseph Sokolowski. I am a Freshman at the Rochester Institute of Technology majoring in Cybersecurity and minoring in System Administration and Networking.
+    </p>
+      <h2 class="center" style="width: 30%">
+        College
+      </h2>
+      <img src="Images/RIT_logo.jpg" class="center" style="width:18%;">
+      <p style="width:70%" class="center">
+        I attend the Rochester Institute of Technology (RIT) in Rochester, NY, class of 2028.
+        I am currently in the Cybersecurity program and taking a few classes in the Software Engineering program.
+        I plan to minor in IT and start classes in that program in the Fall semester of 2025.
+        I am also a performing arts scholar and part of the RIT Philharmonic Orchestra. 
+      </p>
+    <!--clock-->
+    <div style="color:#fffffff8" class="center" id="d1"></div>
+    <script type="text/javascript">
+      function updateTime(){
+        var currentTime = new Date();
+        var day = currentTime.getDate();
+        var month = currentTime.getMonth() + 1;
+        var yr = currentTime.getFullYear();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var seconds = currentTime.getSeconds();
+        var suffix = "AM";
+
+        if (day < 10){
+          day = "0" + day;
+        }
+
+        if (month < 10){
+          month = "0" + month;
+        }
+        
+        if (seconds < 10){
+          seconds = "0" + seconds;
+        }
+
+        if (minutes < 10){
+            minutes = "0" + minutes;}
+
+        if (hours >= 12) {
+            suffix = "PM";
+            hours = hours - 12;
+        }
+        if (hours == 0) {
+            hours = 12;
+        }
+
+        document.getElementById("d1").innerHTML = "<b>" +month+ "/" +day+ "/" +yr+ " " + hours + ":" + 
+            minutes + ":" + seconds + " " + suffix + "</b>";
+      }
+      updateTime();
+      setInterval(updateTime, 100); // Set interval to 1000 milliseconds for 1 second
+    </script>
+  </body>
+</html>

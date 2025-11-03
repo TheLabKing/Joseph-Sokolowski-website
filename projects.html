@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      charset="stf-8"
+      name="A list of my current and past projects"
+      content="My Website,
+      My final high school solo,
+      and an apple-like reminders system made in Python"
+    />
+      >
+    <title>Joe's Projects</title>
+  </head>
+  <link rel="stylesheet" href="style.css">
+  <body style="background-color:#000000c0">
+    <div id="navSidepanel" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+      <a href="main.html">Home</a>
+      <a href="resume.html">Resume</a>
+      <a href="projects.html">My Projects</a>
+      <a href="future.html">My Plans</a>
+      <a href="contact.html">Contact Me</a>
+    </div>
+    <div id="main">
+      <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+    </div>
+    <script> 
+      function openNav()  {
+        document.getElementById("navSidepanel").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+      function closeNav() {
+        document.getElementById("navSidepanel").style.width = "0px";
+        document.getElementById("main").style.marginLeft = "0px";
+      }
+    </script>
+    <h1 class="center">My Projects</h1>
+    <p class="center">
+      Check out some of my current and past projects!
+    </p>
+    <h2 style="text-align: center; width: 50%" class="center">
+      What am I currently working on
+    </h2>
+    <br>
+    <h3 id="current1" class="center">
+      This Website
+    </h3>
+    <br>
+    <p style="width:60%"class="center">
+      This website is a constant work in progress,
+      I will continue to update it throughout college, and most likely, by then, I will revise the format of it.
+      I will continue to add more features and make the pages more interactive and functional.
+    </p>
+    <p style="width:60%"class="center">Last updated: 2/6/2025, 3:27 PM</p>
+    <br>
+    <h2 class="center">Past Projects</h2>
+    <h3 id="current2" class="center">
+      My Final Solo
+    </h3>
+    <img src=Images/cello_scroll.jpg class="center" style="width: 45%" alt="Headshot of Joseph Sokolowski holding a cello by it's neck">
+    <p style="width:60%" class="center">
+      On April 16th, 2024, I performed my final high school solo for the Academy of Visual and Performing Arts (AVPA).
+      I performed a solo for the public every year as a member requirement of the Academy of Visual and Performing Art.
+      Reflecting back, it was a long and incredible journey to that point, yet it felt as if no time had passed since my first solo.
+      I will be performing Toccata in D minor by J.S. Bach,
+      but you might know it as the piece that plays during lightning in a 1900s horror film, Dracula.
+    </p>
+    <a style="color: #6179e4; width: 17%" class="center"  href="https://youtu.be/mmJim2h-byQ?si=w_z7rwx_ptUxSnWo">YouTube link to solo</a>
+    <br>
+    <h3 id="current1" class="center">
+      A Reminders System
+    </h3>
+    <p style="width:60%" class="center">
+      Lorem ipsum odor amet, consectetuer adipiscing elit. Dis duis convallis aliquet viverra a? Hendrerit platea laoreet sed facilisis ornare per netus. Non velit 
+      inceptos venenatis faucibus odio ante. Inceptos scelerisque eget ante, risus molestie lacus aenean proin. Magna eleifend turpis penatibus taciti velit tincidunt
+      habitasse neque. Porttitor class nullam litora nulla ornare lobortis interdum primis porttitor. Cras nisl faucibus vivamus fames ullamcorper ut, tempus nostra.
+      Volutpat cubilia potenti auctor quisque tincidunt elit; turpis senectus class. Hendrerit mus litora leo consequat eget eleifend tempor diam finibus.
+    </p>
+    <h3 class="center">To be continued</h3>
+    <p style="width:60%" class="center">
+      Come back soon!
+    </p>
+  </body>
+</html>

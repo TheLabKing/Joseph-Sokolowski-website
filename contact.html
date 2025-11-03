@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <link rel="stylesheet" href="style.css">
+  <body style="background-color:#000000c0">
+    <body style="background-color:#000000c0">
+      <div id="navSidepanel" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+        <a href="main.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html">My Projects</a>
+        <a href="future.html">My Plans</a>
+        <a href="contact.html">Contact Me</a>
+      </div>
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+      </div>
+      <script> 
+        function openNav()  {
+          document.getElementById("navSidepanel").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        function closeNav() {
+          document.getElementById("navSidepanel").style.width = "0px";
+          document.getElementById("main").style.marginLeft = "0px";
+        }
+      </script>
+    <h1 class="center"style="font-size:40px;">Contact Me!</h1>
+    <div class="container">
+      <form action="contact.php" target="_top">
+      <label for="uname">Username</label>
+      <input type="text" id="uname" name="username" placeholder="JohnDoe1234" required">
+      <label for="nicname">Nickname</label>
+      <input type="text" id="nicname" name="nickname" placeholder="Optional">
+      <label for="favecolor">Favorite color</label>
+      <input type="text" id="favecolor" name="favoritecolor" placeholder="Optional">
+      <label for="feedback">Feedback</label>
+      <textarea id="fdbc" name="feedback" value="Tell me something..." required style="height:150px" autocomplete="on"></textarea>
+      <input type="submit" value="Send!">
+    </form>
+  </body>
+</html>
