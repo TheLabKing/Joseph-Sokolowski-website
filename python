@@ -1,0 +1,93 @@
+import sys
+import math
+
+
+def read_points(filename):
+    """
+    Read points from a file.
+    Each line: x,y  (comma-separated floats)
+    Returns a list of (x, y) tuples.
+    """
+    points = []
+    try:
+        with open(filename, "r") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                parts = line.split(",")
+                if len(parts) != 2:
+                    # Skip badly formatted lines
+                    continue
+                x = float(parts[0])
+                y = float(parts[1])
+                points.append((x, y))
+    except FileNotFoundError:
+        print(f"Error: could not open file '{filename}'")
+        sys.exit(1)
+    return points
+
+
+def euclidean_distance(p1, p2):
+    """
+    Return Euclidean distance between points p1 and p2.
+    Each point is a tuple (x, y).
+    """
+    dx = p1[0] - p2[0]
+    dy = p1[1] - p2[1]
+    return math.sqrt(dx * dx + dy * dy)
+
+
+def make_results(list1, list2):
+    """
+    For each point in list1, find the closest point in list2.
+    Returns a list of tuples: (closest_index, sum_of_x_values)
+    """
+    results = []
+    for p1 in list1:
+        smallest_dist = None
+        smallest_index = None
+
+        for idx, p2 in enumerate(list2):
+            d = euclidean_distance(p1, p2)
+            if smallest_dist is None or d < smallest_dist:
+                smallest_dist = d
+                smallest_index = idx
+
+        sum_x = p1[0] + list2[smallest_index][0]
+        results.append((smallest_index, sum_x))
+    return results
+
+
+def main():
+    # Expect exactly two filenames on the command line
+    if len(sys.argv) != 3:
+        print("Usage: exam2_demo.py <file1> <file2>")
+        sys.exit(1)
+
+    file1 = sys.argv[1]
+    file2 = sys.argv[2]
+
+    points1 = read_points(file1)
+    points2 = read_points(file2)
+
+    if not points1 or not points2:
+        print("Error: one of the files did not contain any valid points.")
+        sys.exit(1)
+
+    results = make_results(points1, points2)
+
+    # Print output in the style of the sample
+    for i, (closest_idx, sum_x) in enumerate(results):
+        p1 = points1[i]
+        p2 = points2[closest_idx]
+        dist_val = euclidean_distance(p1, p2)
+        print(
+            f"The smallest distance of point {i} ({p1}) "
+            f"is {closest_idx}=({p2[0]},{p2[1]}). "
+            f"Sum is {sum_x}"
+        )
+
+
+if __name__ == "__main__":
+    main()
